@@ -8,11 +8,11 @@ function Hero() {
        <Camera sizes={30}/>
 
       </span>
-      <div className="flex items-center flex-col gap-2">
+      <div className="flex items-center flex-col gap-2 text-center">
         <h1 className="text-2xl xl:text-7xl font-medium">
           Elevate Your Visual Storytelling
         </h1>
-        <h2 className="text-xl xl:text-5xl text-center">
+        <h2 className="text-xl xl:text-5xl">
           Professional Video Recording & Editing Services Tailored for You
         </h2>
         <p className=" xl:text-xl">

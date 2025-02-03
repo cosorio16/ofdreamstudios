@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Menu from "../icons/Menu";
 import Close from "../icons/Close";
+import useStore from "../store/store";
 
 function Header() {
+  const { toggleModal } = useStore();
   const [showMenu, setShowMenu] = useState(false);
 
   return (
@@ -22,7 +24,10 @@ function Header() {
           >
             Contact
           </a>
-          <button className="border px-5 py-1 rounded-full hover:bg-[#222] hover:text-white cursor-pointer transition-all duration-300">
+          <button
+            onClick={() => toggleModal(true)}
+            className="border px-5 py-1 rounded-full hover:bg-[#222] hover:text-white cursor-pointer transition-all duration-300"
+          >
             Sing Up
           </button>
         </nav>
@@ -37,9 +42,7 @@ function Header() {
             showMenu ? "translate-0" : "-translate-x-full"
           } flex flex-col p-4 transition-all duration-300`}
         >
-          <button 
-          onClick={() => setShowMenu(false)}
-          className="self-end">
+          <button onClick={() => setShowMenu(false)} className="self-end">
             <Close sizes={30} />
           </button>
         </div>
