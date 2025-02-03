@@ -19,7 +19,7 @@ function Header() {
             Services
           </a>
           <a
-            href="#"
+            href="#contact"
             className="border-b-2 border-[#222]/0 hover:border-[#222] transition-all duration-500"
           >
             Contact

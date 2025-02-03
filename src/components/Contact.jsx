@@ -3,7 +3,7 @@ import Message from "../icons/Message";
 
 function Contact() {
   return (
-    <section className="px-5 xl:px-20 min-h-72 flex flex-col gap-4 py-20 items-center">
+    <section id="contact" className="px-5 xl:px-20 min-h-72 flex flex-col gap-4 py-20 items-center">
       <h1 className="text-4xl font-medium flex items-center gap-3">
         <span className="border aspect-square rounded-full bg-[#222] text-white p-2">
           <Message sizes={30} />
