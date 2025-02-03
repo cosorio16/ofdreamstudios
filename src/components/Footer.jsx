@@ -89,7 +89,7 @@ function Footer() {
         </div>
       </footer>
 
-      <footer className="bg-[#222] text-white px-5 py-10">
+      <footer className="bg-[#222] text-white px-5 py-10 xl:hidden">
         <div className="flex justify-between flex-col gap-4">
           <h1 className="grow text-4xl flex items-center gap-2">
             OfdreamStudios
