@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+@import "tailwindcss";
+
+* {
+  font-family: "Parkinsans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+/* .swiper_container {
+  z-index: -10 !important;
+} */
+
+.swiper-slide {
+  width: 400px !important;
+  height: 500px !important;
+  position: relative;
+}
+
+.swiper-slide video {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
