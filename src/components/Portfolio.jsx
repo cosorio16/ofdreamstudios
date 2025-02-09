@@ -7,21 +7,21 @@ import "swiper/css/navigation";
 import { EffectCoverflow, Autoplay } from "swiper/modules";
 
 function Portfolio() {
-  // const [currentVideo, setCurrentVideo] = useState(0);
+  const [currentVideo, setCurrentVideo] = useState(0);
 
-  // useEffect(() => {
-  //   document.querySelectorAll("video").forEach((video) => video.pause());
-  //   const activeVideo = document.querySelector(`.swiper-slide-active video`);
-  //   if (activeVideo) {
-  //     activeVideo.play();
-  //   }
-  // }, [currentVideo]);
+  useEffect(() => {
+    document.querySelectorAll("video").forEach((video) => video.pause());
+    const activeVideo = document.querySelector(`.swiper-slide-active video`);
+    if (activeVideo) {
+      activeVideo.play();
+    }
+  }, [currentVideo]);
 
   return (
-    <div className="xl:px-40 py-20 relative perspective-distant transform-3d">
+    <section id="portfolio" className="xl:px-40 py-20 relative perspective-distant transform-3d">
       <Swiper
         effect={"coverflow"}
-        // onSlideChange={(swiper) => setCurrentVideo(swiper.realIndex)}
+        onSlideChange={(swiper) => setCurrentVideo(swiper.realIndex)}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
@@ -49,11 +49,12 @@ function Portfolio() {
               loop
               autoPlay
               preload="auto"
+              loading="lazy"
             ></video>
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 }
 

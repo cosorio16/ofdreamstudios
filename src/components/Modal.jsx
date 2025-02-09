@@ -1,6 +1,7 @@
 import { createPortal } from "react-dom";
 import useStore from "../store/store";
-import Button from "../components/Button";
+import { Calendar } from "@heroui/react";
+import { today, getLocalTimeZone } from "@internationalized/date";
 
 function Modal() {
   const { modal, toggleModal } = useStore();
@@ -19,27 +20,11 @@ function Modal() {
               modal ? "scale-100" : "scale-0"
             } transition-all duration-300`}
           >
-            <h1>Book Right Now</h1>
-            <button className="border rounded-full px-5 py-2">
-              Login With Google
-            </button>
-            <button className="border rounded-full px-5 py-2">
-              Login With Google
-            </button>
-
-            <form className="flex flex-col gap-4 grow">
-              <input
-                type="text"
-                placeholder="username"
-                className="border px-5 py-2 rounded"
-              />
-              <input
-                type="password"
-                placeholder="password"
-                className="border px-5 py-2 rounded"
-              />
-            </form>
-            <Button dark text={"Log In"} />
+            <Calendar
+              isReadOnly
+              aria-label="Date (Read Only)"
+              value={today(getLocalTimeZone())}
+            />
           </div>
         </div>,
         document.body

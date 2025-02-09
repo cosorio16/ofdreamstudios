@@ -28,7 +28,7 @@ function Header() {
             onClick={() => toggleModal(true)}
             className="border px-5 py-1 rounded-full hover:bg-[#222] hover:text-white cursor-pointer transition-all duration-300"
           >
-            Sing Up
+            Book Now
           </button>
         </nav>
       </header>

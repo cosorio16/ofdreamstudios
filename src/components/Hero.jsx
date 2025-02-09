@@ -24,7 +24,7 @@ function Hero() {
 
       <div className="flex flex-wrap items-center justify-center gap-2 xl:gap-16">
         <Button text={"Book Now"} dark />
-        <Button text={"See More"} />
+        <Button text={"See More"} link href={"#portfolio"} />
       </div>
     </section>
   );
